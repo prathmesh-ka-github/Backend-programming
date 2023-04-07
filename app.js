@@ -6,10 +6,10 @@ const app = express();
 app.use('/static', express.static('static'));
 
 app.get("/", (req,res) =>{
-    res.send("<h1>Express app</h1>");
+    res.send("<h1>Express app</h1><a href='/shop'>click here</a>");
 })
 app.get("/shop", (req,res) =>{
-    res.send("Shopping page of Express app");
+    res.send("<h1>Shopping page of Express app</h1><a href='./'>click here</a>");
 })
 
 app.listen(port, ()=>{
